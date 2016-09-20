@@ -1,0 +1,19 @@
+{
+  "name": "@astronomerio/integration-s3",
+  "version": "1.0.0",
+  "description": "Send logs of your analytics.js events to an Amazon S3 bucket.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astronomerio/integration-s3.git"
+  },
+  "author": "Alois Barreras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astronomerio/integration-s3/issues"
+  },
+  "homepage": "https://github.com/astronomerio/integration-s3#readme"
+}
