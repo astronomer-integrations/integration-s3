@@ -9,10 +9,6 @@ describe('Mixpanel', function() {
 
     beforeEach(function(){
         settings = {
-            region: 'us-east-1',
-            bucketName: 'astronomer-test',
-            accessKeyId: 'AKIAILIYKBHR2VM5AWHQ',
-            secretAccessKey: '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'
         };
         s3Integration = new S3Integration(settings);
         test = Test(s3Integration, __dirname);
@@ -21,7 +17,19 @@ describe('Mixpanel', function() {
     it('should have correct settings', function(){
         test
         .name('S3 Integration')
-        .ensure('settings.bucketName')
         .channels(['server']);
+    });
+
+    describe('.track()', function(){
+        it('should send track correctly', function(done){
+            var json = test.fixture('track-basic');
+            test
+            .set(settings)
+            .track(json.input)
+            .end(function(err, res){
+                if (err) return done(err);
+                done();
+            });
+        });
     });
 });

@@ -4,7 +4,7 @@
   "description": "Send logs of your analytics.js events to an Amazon S3 bucket.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/index.js -r dotenv/config --timeout 20s -r should -r spec --inline-diffs"
   },
   "repository": {
     "type": "git",
@@ -21,11 +21,14 @@
     "bunyan": "^1.8.1",
     "dotenv": "^2.0.0",
     "segmentio-integration": "^5.0.1",
-    "segmentio-integration-tester": "^2.0.3"
+    "segmentio-integration-tester": "^2.0.3",
+    "uid": "0.0.2"
   },
   "devDependencies": {
     "assert": "^1.4.1",
+    "dotenv": "^2.0.0",
     "mocha": "^3.0.2",
-    "should": "^11.1.0"
+    "should": "^11.1.0",
+    "spec": "^1.0.1"
   }
 }
