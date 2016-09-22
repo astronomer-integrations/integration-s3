@@ -2,7 +2,7 @@ var Test = require('segmentio-integration-tester');
 var assert = require('assert');
 var S3Integration = require('../lib');
 
-describe('Mixpanel', function() {
+describe('S3', function() {
     var s3Integration;
     var settings;
     var test;
