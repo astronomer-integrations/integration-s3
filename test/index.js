@@ -17,7 +17,8 @@ describe('Mixpanel', function() {
     it('should have correct settings', function(){
         test
         .name('S3 Integration')
-        .channels(['server']);
+        .channels(['server'])
+        .ensure('settings.streamName');
     });
 
     describe('.track()', function(){
