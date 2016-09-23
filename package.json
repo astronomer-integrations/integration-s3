@@ -18,7 +18,6 @@
   "homepage": "https://github.com/astronomerio/integration-s3#readme",
   "dependencies": {
     "aws-sdk": "^2.6.3",
-    "bunyan": "^1.8.1",
     "dotenv": "^2.0.0",
     "segmentio-integration": "^5.0.1",
     "segmentio-integration-tester": "^2.0.3",
